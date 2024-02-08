@@ -3,48 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Hiking Careers</title>
     <style>
-      h1 {
-        font-size: 40px;
-        font-weight: normal;
-        color: rgb(50, 50, 50);
-        text-align: center;
-      }
-
       #banner {
         width: 100%;
         height: 360px;
         object-fit: cover;
       }
-
-      h2 {
-        font-size: 32px;
-        color: rgb(100, 100, 100);
-        text-align: center;
-        font-weight: normal;
-      }
-
-      .bodytext {
-        color: rgb(80)80, 80);
-      }
-
-      #container {
-        max-width: 80%;
-        margin: 0 auto;
-      }
     </style>
   </head>
   <body>
-    <div id="container">
-    <h1>Hiking Careers</h1>
-    <img id="banner" src="/static/hikingbanner.jpg" height="320">
-    <h2>About Hiking Careers</h2>
-    <p class="bodytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam urna ac dui viverra dapibus. Cras egestas id dolor accumsan auctor. Maecenas euismod molestie augue, sed congue purus ultrices sed. Vestibulum varius posuere augue, id hendrerit magna auctor nec. Vivamus tincidunt elementum pellentesque. Aenean luctus nisi nec dictum eleifend. Proin et venenatis dolor. Maecenas vitae tortor eget elit molestie porta non sed lacus. Quisque ullamcorper ac eros at lacinia. Vestibulum porttitor orci risus, ac interdum lectus elementum id. Aliquam et sem id risus commodo volutpat. Maecenas consequat, mauris at vehicula scelerisque, velit dolor dictum sapien, eu vulputate tellus nisi id sem. Nunc a iaculis odio. Integer id est ac libero feugiat rhoncus at quis neque. Aenean condimentum vehicula tellus, in sollicitudin velit ullamcorper ut. Pellentesque eu metus non ex pulvinar maximus.</p>
-    <h2>Open Positions</h2>
-    <p class="bodytext">TODO - Show Jobs</p>
-      <div style="text-align:center;">
-    <button>Contact Us</button>
+    <div class="container">
+    <h1 class="pt-4 text-center">Hiking Careers</h1>
+    <img class="img-fluid my-4" id="banner" src="/static/hikingbanner.jpg">
+    <h2 class="text-center">About Hiking Careers</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam urna ac dui viverra dapibus. Cras egestas id dolor accumsan auctor. Maecenas euismod molestie augue, sed congue purus ultrices sed. Vestibulum varius posuere augue, id hendrerit magna auctor nec. Vivamus tincidunt elementum pellentesque. Aenean luctus nisi nec dictum eleifend. Proin et venenatis dolor. Maecenas vitae tortor eget elit molestie porta non sed lacus. Quisque ullamcorper ac eros at lacinia. Vestibulum porttitor orci risus, ac interdum lectus elementum id. Aliquam et sem id risus commodo volutpat. Maecenas consequat, mauris at vehicula scelerisque, velit dolor dictum sapien, eu vulputate tellus nisi id sem. Nunc a iaculis odio. Integer id est ac libero feugiat rhoncus at quis neque. Aenean condimentum vehicula tellus, in sollicitudin velit ullamcorper ut. Pellentesque eu metus non ex pulvinar maximus.</p>
+    <h2 class="pb-2 text-center">Open Positions</h2>
+    <div>
+      {% for job in jobs %}
+        {%include 'jobitem.html'%}
+      {% endfor %}
+    </div>
+      <div class="text-center">
+    <button class="btn btn-primary my-4">Contact Us</button>
         <p>Copyright 2024, Hiking Careers</p>
       </div>
     </div>
