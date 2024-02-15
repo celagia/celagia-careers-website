@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine, text
 import os
 
-my_secret = os.environ['DB_PASSWORD']
+my_secret = os.environ.get('DB_PASSWORD')
 
 dbConnectionString = "mysql+pymysql://eo4ymj8ct317cjcw98bx:" + my_secret + "@aws.connect.psdb.cloud/hikingcareers?charset=utf8mb4"
 
